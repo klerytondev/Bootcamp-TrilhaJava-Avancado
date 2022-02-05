@@ -65,6 +65,7 @@ public class Application {
 
 		catch (IOException e) {
 			System.err.printf("Erro na abertura do arquivo: %s.\n", e.getMessage());
+			e.getStackTrace();
 		}
 
 		System.out.println("Listagem de todos os Filmes:");
@@ -126,16 +127,16 @@ public class Application {
 		
 		
 	
-	System.out.println();
-	
-	System.out.println("Calculo media Público de todos os filmes:\n");
-	
-	Double mediaPublicoo = filmesProcessados.saidaFilmes().stream().mapToDouble(Filme::getQtdePublico)
-			.average().getAsDouble();
-	
-	System.out.println(mediaPublicoo);
-	
-	}
+		System.out.println();
+		
+		System.out.println("Calculo media Público de todos os filmes:\n");
+		
+		Double mediaPublicoo = filmesProcessados.saidaFilmes().stream().mapToDouble(Filme::getQtdePublico)
+				.average().getAsDouble();
+		
+		System.out.println(mediaPublicoo);
+		
+		}
 }
 
 

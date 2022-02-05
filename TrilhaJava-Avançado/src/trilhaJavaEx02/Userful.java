@@ -8,18 +8,18 @@ public class Userful {
 
 	Scanner sc = new Scanner(System.in);
 
-	int op;
+	int opcao;
 
 	public void cadastroLivros() {
 
 		Map<String, Books> mapaLivros = new HashMap<>();
 
-		op = selecionaOpcao();
+		opcao = selecionaOpcao();
 
-		if (op == 1 || op == 2) {
+		if (opcao == 1 || opcao == 2) {
 
 			do {
-				switch (op) {
+				switch (opcao) {
 				case 1:
 					System.out.println("=======================================");
 					System.out.print("Digite o nome do livro: ");
@@ -49,13 +49,13 @@ public class Userful {
 					}
 					break;
 				}
-				op = selecionaOpcao();
+				opcao = selecionaOpcao();
 
-			} while (op != 0);
+			} while (opcao != 0);
 
 			System.out.print("Você saiu!");
 
-		} else if(op < 0 || op > 2) {
+		} else if(opcao < 0 || opcao > 2) {
 			System.out.println("Entrada inválida!");
 		}
 		System.out.println("Fim do programa...");
