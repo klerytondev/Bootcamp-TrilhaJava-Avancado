@@ -5,23 +5,19 @@ import java.util.List;
 
 public class FilmesProcessados {
 
-	private List<Filme> filmesProcessados = new ArrayList<>();
+	private List<Filme> processamentoFilmes = new ArrayList<>();
 
-	public List<Filme> getFilmesProcessados() {
-		return filmesProcessados;
+	public List<Filme> saidaFilmes() {
+		return processamentoFilmes;
 	}
 
-	public void setFilmesProcessados(List<Filme> filmesProcessados) {
-		this.filmesProcessados = filmesProcessados;
+	public void addProcessamentoFilmes(Filme Filmes) {
+		processamentoFilmes.add(Filmes);
 	}
 
-	public void addFilmes(Filme filme) {
-
-		this.filmesProcessados.add(filme);
-	}
-
-	public void retornoDeVideosProcessados() {
-		System.out.println(filmesProcessados);
+	@Override
+	public String toString() {
+		return "FilmesProcessados [processamentoFilmes=" + processamentoFilmes + "]";
 	}
 
 }
